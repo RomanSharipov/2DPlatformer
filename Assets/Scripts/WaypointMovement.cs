@@ -38,7 +38,7 @@ public class WaypointMovement : MonoBehaviour
         }
     }
 
-    private void SetRotation()
+    private void RotationDirectionOfMove()
     {
         if (_previousFramePosition > transform.position.x)
         {
@@ -65,7 +65,7 @@ public class WaypointMovement : MonoBehaviour
                 _currentPoint = 0;
             }
         }
-        SetRotation();
+        RotationDirectionOfMove();
     }
 
     private void Attack()
