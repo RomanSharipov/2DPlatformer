@@ -279,6 +279,20 @@ MonoBehaviour:
   _secondsBetweenSpawn: 5
   _templateCoin: {fileID: 6518972972957112907, guid: 641f6017c1cb19f468ef90184b41ed4c,
     type: 3}
+  _takeCoin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000922}
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &506939317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,6 +715,7 @@ GameObject:
   - component: {fileID: 957000916}
   - component: {fileID: 957000917}
   - component: {fileID: 957000919}
+  - component: {fileID: 957000923}
   - component: {fileID: 957000920}
   - component: {fileID: 957000922}
   m_Layer: 9
@@ -856,6 +871,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ce81af7ff8a154285ed08639bdd6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000919}
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _walk:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000919}
+        m_MethodName: Walk
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 957000923}
+        m_MethodName: Walk
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 957000919}
+        m_MethodName: RotateDirectionOfMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &957000922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,6 +943,18 @@ MonoBehaviour:
   <Speed>k__BackingField: 3
   <ForceJump>k__BackingField: 8
   <IsGrounded>k__BackingField: 0
+--- !u!114 &957000923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957000914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62688d12a3e92c643b8f74ef8e390114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &968920873
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +1019,20 @@ MonoBehaviour:
   _secondsBetweenSpawn: 5
   _templateCoin: {fileID: 6518972972957112907, guid: 641f6017c1cb19f468ef90184b41ed4c,
     type: 3}
+  _takeCoin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000922}
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &978500063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1141,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.3442624, y: 1}
+    m_SensorSize: {x: 2.7827868, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3376,6 +3467,20 @@ MonoBehaviour:
   _secondsBetweenSpawn: 5
   _templateCoin: {fileID: 6518972972957112907, guid: 641f6017c1cb19f468ef90184b41ed4c,
     type: 3}
+  _takeCoin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000922}
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &1563372759
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3575,6 +3680,20 @@ MonoBehaviour:
   _secondsBetweenSpawn: 5
   _templateCoin: {fileID: 6518972972957112907, guid: 641f6017c1cb19f468ef90184b41ed4c,
     type: 3}
+  _takeCoin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957000922}
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1823577301
 GameObject:
   m_ObjectHideFlags: 3

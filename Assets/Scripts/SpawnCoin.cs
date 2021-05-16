@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
 
@@ -8,6 +9,7 @@ public class SpawnCoin : MonoBehaviour
 {
     [SerializeField] private float _secondsBetweenSpawn;
     [SerializeField] private GameObject _templateCoin;
+    [SerializeField] private UnityEvent _takeCoin;
 
     private GameObject _coin;
 
@@ -27,7 +29,7 @@ public class SpawnCoin : MonoBehaviour
                 _coin = gameObject.transform.GetChild(0).gameObject;
                 Destroy(_coin);
                 StartCoroutine(Spawn());
-                player.AddCoin();
+                _takeCoin.Invoke();
             }
         }
     }
