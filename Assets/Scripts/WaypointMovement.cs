@@ -6,8 +6,6 @@ public class WaypointMovement : MonoBehaviour
 {
     [SerializeField] private Transform _path;
     [SerializeField] private int _speed;
-    [SerializeField] private float _distanceForAttack;
-    [SerializeField] private LayerMask _player;
     [SerializeField] private bool _playerNearby;
     [SerializeField] private Animator _animator;
 
@@ -27,7 +25,6 @@ public class WaypointMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _playerNearby = Physics2D.Raycast(transform.position, transform.right, _distanceForAttack, _player);
         if (_playerNearby == false)
         {
             MoveOnPoints();
@@ -70,6 +67,22 @@ public class WaypointMovement : MonoBehaviour
 
     private void Attack()
     {
-        _animator.SetBool("Attack",true);
+        _animator.SetBool("Attack", true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent<PlayerOptions>(out PlayerOptions player))
+        {
+            _playerNearby = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent<PlayerOptions>(out PlayerOptions player))
+        {
+            _playerNearby = false;
+        }
     }
 }

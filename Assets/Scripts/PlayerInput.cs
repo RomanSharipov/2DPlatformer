@@ -6,9 +6,10 @@ using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
-    private float _horizontal;
     [SerializeField] private UnityEvent _jump;
     [SerializeField] private MoveEvent _walk;
+
+    private float _horizontal;
 
     private void FixedUpdate()
     {
@@ -22,5 +23,6 @@ public class PlayerInput : MonoBehaviour
         }
     }
 }
+
 [System.Serializable]
 public class MoveEvent : UnityEvent<float> { }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerOptions : MonoBehaviour
 {
@@ -10,18 +11,17 @@ public class PlayerOptions : MonoBehaviour
     [SerializeField] private Transform _rightFoot;
     [SerializeField] private int _countCoin;
 
-    [field: SerializeField] public float Speed { get;  private set; }
+    [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public float ForceJump { get; private set; }
-    [field: SerializeField] public bool IsGrounded { get; private set; }
 
-    void FixedUpdate()
-    {
-        IsGrounded = CheckIsGrounded(_leftFoot) || CheckIsGrounded(_rightFoot);
-    }
-
-    private bool CheckIsGrounded(Transform foot)
+    private bool CheckIsGroundedFoot(Transform foot)
     {
         return Physics2D.Raycast(foot.position, -foot.up, _distanceToGround, _ground);
+    }
+
+    public bool CheckIsGrounded()
+    {
+        return CheckIsGroundedFoot(_leftFoot) || CheckIsGroundedFoot(_rightFoot);
     }
 
     public void AddCoin()

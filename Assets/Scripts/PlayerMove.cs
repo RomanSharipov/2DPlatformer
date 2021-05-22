@@ -37,11 +37,10 @@ public class PlayerMove : MonoBehaviour
 
     public void Jump()
     {
-        if (_playerOptions.IsGrounded)
+        if (_playerOptions.CheckIsGrounded())
         {
             _rigidbody.velocity = Vector2.zero;
             _rigidbody.AddForce(Vector2.up * _playerOptions.ForceJump, ForceMode2D.Impulse);
         }
     }
-
 }
